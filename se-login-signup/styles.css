@@ -1,0 +1,241 @@
+/* ============================================
+   styles.css — se-login-signup
+   ICSI 418Y Software Engineering HW1
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  --bg:          #f5f3ee;
+  --surface:     #ffffff;
+  --border:      #ddd9d0;
+  --accent:      #2b4d3f;
+  --accent-light:#e8f0ec;
+  --text-dark:   #1a1a1a;
+  --text-mid:    #4a4a4a;
+  --text-muted:  #8a8a8a;
+  --error:       #c0392b;
+  --radius:      10px;
+  --shadow:      0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  --transition:  0.22s ease;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+
+  /* Subtle dot-grid background */
+  background-image: radial-gradient(circle, #c8c3b8 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ---- Page wrapper ---- */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ---- Brand mark ---- */
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+/* ---- Card ---- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 420px;
+  padding: 2.8rem 2.6rem 2.4rem;
+}
+
+/* ---- Card Header ---- */
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.card-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.card-header p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.45rem;
+  font-weight: 400;
+}
+
+/* ---- Form ---- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+
+.form-group input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 300;
+  color: var(--text-dark);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.7rem 0.95rem;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* ---- Submit Button ---- */
+.btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 0.78rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-submit:hover {
+  background-color: #1e3830;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(43,77,63,0.25);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---- Divider ---- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.6rem 0 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ---- Redirect Link Row ---- */
+.redirect {
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.redirect a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.redirect a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ---- Footer note ---- */
+.page-footer {
+  margin-top: 1.8rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ---- Animation ---- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 460px) {
+  .card {
+    padding: 2rem 1.5rem 1.8rem;
+  }
+
+  .card-header h1 {
+    font-size: 1.55rem;
+  }
+}
