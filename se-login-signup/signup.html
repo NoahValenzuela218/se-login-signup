@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — SE App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Brand -->
+    <span class="brand">SE App</span>
+
+    <!-- Card -->
+    <div class="card">
+
+      <div class="card-header">
+        <h1>Create account.</h1>
+        <p>Fill in the details below to get started.</p>
+      </div>
+
+      <form action="#" method="post">
+
+        <!-- First Name -->
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first_name"
+            placeholder="Enter your first name"
+            autocomplete="given-name"
+            required
+          />
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last_name"
+            placeholder="Enter your last name"
+            autocomplete="family-name"
+            required
+          />
+        </div>
+
+        <!-- User ID -->
+        <div class="form-group">
+          <label for="user-id">User ID</label>
+          <input
+            type="text"
+            id="user-id"
+            name="user_id"
+            placeholder="Choose a user ID"
+            autocomplete="username"
+            required
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            required
+          />
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Create Account</button>
+
+      </form>
+
+      <!-- Redirect to Login -->
+      <div class="divider">or</div>
+      <p class="redirect">
+        Already have an account?&nbsp;
+        <a href="login.html">Sign in here</a>
+      </p>
+
+    </div><!-- /.card -->
+
+    <p class="page-footer">ICSI 418Y &mdash; Software Engineering HW1</p>
+
+  </div><!-- /.page-wrapper -->
+
+</body>
+</html>

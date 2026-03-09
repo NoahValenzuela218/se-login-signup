@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — SE App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Brand -->
+    <span class="brand">SE App</span>
+
+    <!-- Card -->
+    <div class="card">
+
+      <div class="card-header">
+        <h1>Welcome back.</h1>
+        <p>Sign in to continue to your account.</p>
+      </div>
+
+      <form action="#" method="post">
+
+        <!-- User ID -->
+        <div class="form-group">
+          <label for="user-id">User ID</label>
+          <input
+            type="text"
+            id="user-id"
+            name="user_id"
+            placeholder="Enter your user ID"
+            autocomplete="username"
+            required
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Sign In</button>
+
+      </form>
+
+      <!-- Redirect to Signup -->
+      <div class="divider">or</div>
+      <p class="redirect">
+        Don't have an account?&nbsp;
+        <a href="signup.html">Create one here</a>
+      </p>
+
+    </div><!-- /.card -->
+
+    <p class="page-footer">ICSI 418Y &mdash; Software Engineering HW1</p>
+
+  </div><!-- /.page-wrapper -->
+
+</body>
+</html>
